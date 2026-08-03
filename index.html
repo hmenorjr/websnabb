@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSnabb — Modern Web Design & Development in Åland, Finland & Sweden</title>
+  <meta name="description" content="WebSnabb builds ultra-fast, accessible, and high-converting modern websites for businesses in Åland, Finland, and Sweden. Request a free quote today!">
+  <meta name="keywords" content="web design, web development, Åland, Mariehamn, Finland, Sweden, fast websites, modern design, SEO">
+  <link rel="canonical" href="https://websnabb.github.io/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://websnabb.github.io/">
+  <meta property="og:title" content="WebSnabb — High-Performance Web Design Agency">
+  <meta property="og:description" content="Custom-crafted websites engineered for speed, conversion, and modern aesthetic. Based in Mariehamn, Åland Islands.">
+  <meta property="og:image" content="https://websnabb.github.io/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://websnabb.github.io/">
+  <meta name="twitter:title" content="WebSnabb — High-Performance Web Design Agency">
+  <meta name="twitter:description" content="Custom-crafted websites engineered for speed, conversion, and modern aesthetic. Based in Mariehamn, Åland Islands.">
+  <meta name="twitter:image" content="https://websnabb.github.io/og-image.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "WebSnabb",
+    "url": "https://websnabb.github.io",
+    "logo": "https://websnabb.github.io/logo.png",
+    "description": "Modern freelance web design & development agency based in Åland Islands.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sandåsvägen 4",
+      "addressLocality": "Mariehamn",
+      "postalCode": "22100",
+      "addressCountry": "AX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "60.0971",
+      "longitude": "19.9348"
+    },
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "telephone": "+358400000000",
+    "areaServed": ["Åland", "Finland", "Sweden"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip to content for Accessibility -->
+  <a href="#main-content" class="skip-link" data-i18n="nav.skip">Skip to main content</a>
+
+  <!-- Desktop & Tablet Header Navigation -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="#home" class="logo" aria-label="WebSnabb Homepage">
+        <span class="logo-symbol">⚡</span> WebSnabb<span class="accent-dot">.</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+          <li><a href="#why-us" class="nav-link" data-i18n="nav.why_us">Why Us</a></li>
+          <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="#process" class="nav-link" data-i18n="nav.process">Process</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <div class="lang-switcher-wrapper">
+          <select id="lang-select" class="lang-select" aria-label="Select Language">
+            <option value="en">EN</option>
+            <option value="sv">SV</option>
+            <option value="fi">FI</option>
+          </select>
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark/light theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <a href="#contact" class="btn btn-primary nav-cta" data-i18n="nav.cta">Get Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span data-i18n="hero.badge">Åland • Finland • Sweden</span>
+          </div>
+          <h1 class="hero-title" data-i18n="hero.title">
+            Professional Websites That Help Your Business Grow.
+          </h1>
+          <p class="hero-description" data-i18n="hero.desc">
+            We design and build ultra-fast, modern, and accessible websites tailored for ambitious companies in Åland, Finland, and Sweden.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary btn-lg" data-i18n="hero.cta_primary">Get a Free Quote</a>
+            <a href="#portfolio" class="btn btn-secondary btn-lg" data-i18n="hero.cta_secondary">View Our Work</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="browser-frame">
+            <div class="browser-header">
+              <div class="dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="address-bar">https://websnabb.github.io</div>
+            </div>
+            <div class="browser-body">
+              <div class="mock-hero">
+                <div class="mock-line title"></div>
+                <div class="mock-line subtitle"></div>
+                <div class="mock-grid">
+                  <div class="mock-card"></div>
+                  <div class="mock-card"></div>
+                  <div class="mock-card"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title" data-i18n="services.title">Services Crafted for Digital Excellence</h2>
+          <p class="section-subtitle" data-i18n="services.subtitle">End-to-end digital solutions tailored to build credibility and drive measurable revenue.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="card service-card">
+            <div class="card-icon">🎨</div>
+            <h3 data-i18n="services.s1_title">Website Design</h3>
+            <p data-i18n="services.s1_desc">Custom, bespoke UI/UX designs focused on converting visitors into paying clients.</p>
+          </div>
+          <div class="card service-card">
+            <div class="card-icon">🚀</div>
+            <h3 data-i18n="services.s2_title">Landing Pages</h3>
+            <p data-i18n="services.s2_desc">High-impact single-page experiences built to maximize lead generation and campaign ROI.</p>
+          </div>
+          <div class="card service-card">
+            <div class="card-icon">🏢</div>
+            <h3 data-i18n="services.s3_title">Business Websites</h3>
+            <p data-i18n="services.s3_desc">Comprehensive corporate websites with CMS integration for local SMBs, salons, and shops.</p>
+          </div>
+          <div class="card service-card">
+            <div class="card-icon">🔄</div>
+            <h3 data-i18n="services.s4_title">Website Redesign</h3>
+            <p data-i18n="services.s4_desc">Transform outdated, slow legacy websites into modern, high-converting digital assets.</p>
+          </div>
+          <div class="card service-card">
+            <div class="card-icon">📱</div>
+            <h3 data-i18n="services.s5_title">Responsive Design</h3>
+            <p data-i18n="services.s5_desc">Seamless layouts meticulously crafted to deliver fluid perfection on smartphones, tablets, and desktops.</p>
+          </div>
+          <div class="card service-card">
+            <div class="card-icon">⚡</div>
+            <h3 data-i18n="services.s6_title">Performance Optimization</h3>
+            <p data-i18n="services.s6_desc">Lightning-fast load speeds targeted for 95+ Lighthouse scores to boost SEO rankings.</p>
+          </div>
+          <div class="card service-card">
+            <div class="card-icon">🔍</div>
+            <h3 data-i18n="services.s7_title">SEO Foundations</h3>
+            <p data-i18n="services.s7_desc">Technical on-page optimization, clean semantic markup, and metadata to help you rank locally.</p>
+          </div>
+          <div class="card service-card">
+            <div class="card-icon">🛠️</div>
+            <h3 data-i18n="services.s8_title">Website Maintenance</h3>
+            <p data-i18n="services.s8_desc">Proactive updates, security patches, content tweaks, and continuous reliable support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose WebSnabb -->
+    <section id="why-us" class="section bg-secondary">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title" data-i18n="why.title">Why Choose WebSnabb</h2>
+          <p class="section-subtitle" data-i18n="why.subtitle">Combining engineering precision with agency-grade design aesthetics.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-item">
+            <div class="why-icon">⏱️</div>
+            <h3 data-i18n="why.w1_title">Fast Delivery</h3>
+            <p data-i18n="why.w1_desc">Structured workflows ensure project completion in weeks, not months.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">✨</div>
+            <h3 data-i18n="why.w2_title">Modern Aesthetic</h3>
+            <p data-i18n="why.w2_desc">SaaS-grade, minimalist visual standards inspired by Apple, Vercel, and Linear.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">📱</div>
+            <h3 data-i18n="why.w3_title">Mobile First</h3>
+            <p data-i18n="why.w3_desc">Built from the phone screen up, ensuring perfection for mobile visitors.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">📈</div>
+            <h3 data-i18n="why.w4_title">SEO Friendly</h3>
+            <p data-i18n="why.w4_desc">Structured data, sitemaps, and optimized HTML code for search engines.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">🔒</div>
+            <h3 data-i18n="why.w5_title">Secure & Solid</h3>
+            <p data-i18n="why.w5_desc">Clean, lightweight code free from vulnerable third-party bloat and plugins.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">♿</div>
+            <h3 data-i18n="why.w6_title">Accessible</h3>
+            <p data-i18n="why.w6_desc">WCAG AA compliance ensuring usable experiences for all audience segments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title" data-i18n="portfolio.title">Featured Portfolio</h2>
+          <p class="section-subtitle" data-i18n="portfolio.subtitle">Explore recent projects crafted for local and international brands.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- Card 1 -->
+          <div class="card portfolio-card">
+            <div class="portfolio-thumb dark-thumb">
+              <span class="preview-tag">Restaurant</span>
+              <div class="thumb-content">Havsbris Bistro</div>
+            </div>
+            <div class="portfolio-body">
+              <h3 data-i18n="portfolio.p1_title">Havsbris Bistro & Lounge</h3>
+              <p data-i18n="portfolio.p1_desc">A Scandinavian coastal dining venue featuring online table reservations and interactive menus.</p>
+              <div class="tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS Grid</span>
+                <span class="tag">i18n</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card portfolio-card">
+            <div class="portfolio-thumb construction-thumb">
+              <span class="preview-tag">Construction</span>
+              <div class="thumb-content">Åland Bygg Kraft</div>
+            </div>
+            <div class="portfolio-body">
+              <h3 data-i18n="portfolio.p2_title">Åland Bygg Kraft</h3>
+              <p data-i18n="portfolio.p2_desc">Robust enterprise showcase for a commercial construction contractor with project galleries.</p>
+              <div class="tags">
+                <span class="tag">Vanilla JS</span>
+                <span class="tag">SEO</span>
+                <span class="tag">Mobile First</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card portfolio-card">
+            <div class="portfolio-thumb salon-thumb">
+              <span class="preview-tag">Beauty Salon</span>
+              <div class="thumb-content">Nordic Glow Studio</div>
+            </div>
+            <div class="portfolio-body">
+              <h3 data-i18n="portfolio.p3_title">Nordic Glow Studio</h3>
+              <p data-i18n="portfolio.p3_desc">Minimalist, luxury aesthetic booking landing page for a premier beauty salon in Mariehamn.</p>
+              <div class="tags">
+                <span class="tag">UI/UX</span>
+                <span class="tag">Responsive</span>
+                <span class="tag">Animations</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card portfolio-card">
+            <div class="portfolio-thumb law-thumb">
+              <span class="preview-tag">Law Firm</span>
+              <div class="thumb-content">Strandell & Partners</div>
+            </div>
+            <div class="portfolio-body">
+              <h3 data-i18n="portfolio.p4_title">Strandell & Partners</h3>
+              <p data-i18n="portfolio.p4_desc">Prestigious, accessible legal practice portal focusing on privacy, expertise, and direct consultations.</p>
+              <div class="tags">
+                <span class="tag">Accessibility</span>
+                <span class="tag">WCAG AA</span>
+                <span class="tag">Performance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card portfolio-card">
+            <div class="portfolio-thumb cafe-thumb">
+              <span class="preview-tag">Cafe</span>
+              <div class="thumb-content">Kaffestugan Mariehamn</div>
+            </div>
+            <div class="portfolio-body">
+              <h3 data-i18n="portfolio.p5_title">Kaffestugan Mariehamn</h3>
+              <p data-i18n="portfolio.p5_desc">Warm, artisanal cafe experience highlighting daily roasted coffee and baked goods delivery menu.</p>
+              <div class="tags">
+                <span class="tag">Fast Load</span>
+                <span class="tag">PWA Ready</span>
+                <span class="tag">Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card portfolio-card">
+            <div class="portfolio-thumb ecommerce-thumb">
+              <span class="preview-tag">E-Commerce</span>
+              <div class="thumb-content">Archipelago Design Co.</div>
+            </div>
+            <div class="portfolio-body">
+              <h3 data-i18n="portfolio.p6_title">Archipelago Design Co.</h3>
+              <p data-i18n="portfolio.p6_desc">Sleek e-commerce storefront for handcrafted Nordic interior design products.</p>
+              <div class="tags">
+                <span class="tag">E-Commerce</span>
+                <span class="tag">UX Engineering</span>
+                <span class="tag">Speed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section bg-secondary">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title" data-i18n="process.title">Our 4-Step Process</h2>
+          <p class="section-subtitle" data-i18n="process.subtitle">A transparent, streamlined journey from concept to launch day.</p>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="step-number">01</div>
+            <h3 data-i18n="process.s1_title">Discover</h3>
+            <p data-i18n="process.s1_desc">We discuss your goals, target market, branding preferences, and specific business needs.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">02</div>
+            <h3 data-i18n="process.s2_title">Design</h3>
+            <p data-i18n="process.s2_desc">Interactive, modern UI wireframes and visual mockups tailored specifically to your audience.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">03</div>
+            <h3 data-i18n="process.s3_title">Develop</h3>
+            <p data-i18n="process.s3_desc">Hand-crafted, clean, lightning-fast code engineered for accessibility and mobile devices.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">04</div>
+            <h3 data-i18n="process.s4_title">Launch</h3>
+            <p data-i18n="process.s4_desc">Final testing, Lighthouse optimization, domain setup, and seamless public deployment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title" data-i18n="testimonials.title">Client Experience</h2>
+          <p class="section-subtitle" data-i18n="testimonials.subtitle">What local business leaders say about partnering with WebSnabb.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="card testimonial-card">
+            <div class="rating">★★★★★</div>
+            <p class="quote" data-i18n="testimonials.t1_quote">"WebSnabb completely overhauled our restaurant's web presence. Our online bookings grew by 40% within the first month!"</p>
+            <div class="author">
+              <div class="author-avatar">EE</div>
+              <div>
+                <strong>Elin Eriksson</strong>
+                <span>Owner, Havsbris Bistro</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card">
+            <div class="rating">★★★★★</div>
+            <p class="quote" data-i18n="testimonials.t2_quote">"Working with WebSnabb was amazingly smooth. Fast communication, zero fuss, and the performance scores are top notch."</p>
+            <div class="author">
+              <div class="author-avatar">MK</div>
+              <div>
+                <strong>Marcus Karlsson</strong>
+                <span>CEO, Åland Bygg Kraft</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card">
+            <div class="rating">★★★★★</div>
+            <p class="quote" data-i18n="testimonials.t3_quote">"The modern aesthetic fits our luxury salon image perfectly. Our clients love how simple it is to view our services."</p>
+            <div class="author">
+              <div class="author-avatar">SN</div>
+              <div>
+                <strong>Sofia Nieminen</strong>
+                <span>Founder, Nordic Glow Studio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section bg-secondary">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+          <p class="section-subtitle" data-i18n="faq.subtitle">Everything you need to know about working with us.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span data-i18n="faq.q1">How much does a custom website cost?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a1">Pricing depends on project scope, custom features, and section count. Small business sites usually start at modest baseline prices. Request a free quote for a precise estimate within 24 hours.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span data-i18n="faq.q2">How long does it take to complete a project?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a2">Most landing pages and small business websites take between 1 to 3 weeks from discovery to final launch.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span data-i18n="faq.q3">Do you offer website redesigns?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a3">Yes! We specialize in modernizing legacy websites, speeding up slow load times, and improving mobile responsiveness.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span data-i18n="faq.q4">Can you help with hosting and domain setup?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p data-i18n="faq.a4">Absolutely. We handle configuration, SSL deployment, domain pointing, and hosting setup on ultra-fast platforms like GitHub Pages, Vercel, or Netlify.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <h2 class="section-title" data-i18n="about.title">Crafting Fast, Reliable Web Assets in Mariehamn</h2>
+            <p class="about-text" data-i18n="about.desc1">
+              WebSnabb is a premier freelance web design & development studio located in Mariehamn, Åland Islands. We build custom web platforms for ambitious businesses across Åland, Finland, and Sweden.
+            </p>
+            <p class="about-text" data-i18n="about.desc2">
+              We eliminate framework bloat and unnecessary dependencies. By focusing on clean HTML5, modern CSS, and lightweight JS, we deliver websites that load under a second, score 95+ on Google Lighthouse, and look stunning on every screen.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <div class="stat-number">95+</div>
+                <div class="stat-label" data-i18n="about.stat1">Lighthouse Score</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label" data-i18n="about.stat2">Mobile Responsive</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">&lt;1s</div>
+                <div class="stat-label" data-i18n="about.stat3">Average Load Speed</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card card">
+            <h3 class="card-title" data-i18n="about.card_title">Local Expertise, Regional Reach</h3>
+            <p data-i18n="about.card_desc">We serve as a reliable partner for companies aiming to establish digital leadership in Northern Europe.</p>
+            <ul class="about-list">
+              <li>📍 Sandåsvägen 4, Mariehamn</li>
+              <li>🇦🇽 Åland Islands Specialization</li>
+              <li>🇫🇮 Finnish & 🇸🇪 Swedish Language Support</li>
+              <li>⚡ Modern Web Craftsmanship</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-secondary">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h2 class="section-title" data-i18n="contact.title">Let's Build Something Great</h2>
+            <p data-i18n="contact.subtitle">Ready to elevate your online presence? Send us a message or request a free quote today.</p>
+
+            <div class="info-items">
+              <div class="info-item">
+                <span class="info-icon">📍</span>
+                <div>
+                  <strong>Address</strong>
+                  <p>Sandåsvägen 4, 22100 Mariehamn, Åland Islands</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon">🌐</span>
+                <div>
+                  <strong>Website</strong>
+                  <p>https://websnabb.github.io</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon">✉️</span>
+                <div>
+                  <strong>Email</strong>
+                  <p>hello@websnabb.com</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://maps.google.com/?q=Sandåsvägen+4+22100+Mariehamn" target="_blank" rel="noopener noreferrer" class="btn btn-secondary map-btn" data-i18n="contact.map_btn">
+              📍 View on Google Maps
+            </a>
+          </div>
+
+          <div class="contact-form-container card">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name" data-i18n="contact.label_name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your full name">
+              </div>
+
+              <div class="form-group">
+                <label for="email" data-i18n="contact.label_email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="name@company.com">
+              </div>
+
+              <div class="form-group">
+                <label for="company" data-i18n="contact.label_company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Company Name (Optional)">
+              </div>
+
+              <div class="form-group">
+                <label for="message" data-i18n="contact.label_message">Message</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" data-i18n="contact.submit">Send Message</button>
+              <div id="form-toast" class="form-toast" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-symbol">⚡</span> WebSnabb<span class="accent-dot">.</span>
+        </a>
+        <p data-i18n="footer.tagline">High-performance web design and development agency in Åland.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 WebSnabb. All rights reserved. Sandåsvägen 4, 22100 Mariehamn, Åland Islands.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Sticky Navigation -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="#home" class="mobile-nav-item active">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span data-i18n="nav.home">Home</span>
+    </a>
+    <a href="#services" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <span data-i18n="nav.services">Services</span>
+    </a>
+    <a href="#portfolio" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+      <span data-i18n="nav.portfolio">Work</span>
+    </a>
+    <a href="#about" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span data-i18n="nav.about">About</span>
+    </a>
+    <a href="#contact" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span data-i18n="nav.contact">Contact</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
