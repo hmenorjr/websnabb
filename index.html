@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="sv" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebbSkapa | Custom Websites in Åland Islands from €500</title>
-    <meta name="description" content="Professional, fast, and modern websites for local businesses in Åland & Finland. Fixed price €500. No hassle.">
+    <title>WebbSkapa | Boka Hemsida i Åland från €500</title>
+    <meta name="description" content="Professionella, snabba och moderna hemsidor för lokala företag på Åland. Fast pris €500. Boka enkelt utan krångel.">
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -17,56 +18,94 @@
                             amber: '#D97706',
                             'amber-dark': '#B45309',
                             'amber-light': '#FDE68A',
-                            bg: '#FAFAFA'
+                            bg: '#FAFAFA',
+                            card: '#FFFFFF'
                         }
                     },
-                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
                 }
             }
         }
     </script>
 
+    <!-- Google Fonts & Lucide Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #FAFAFA; color: #0F172A; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAFA;
+            color: #0F172A;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
         .amber-gradient-text {
             background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .bottom-nav-shadow { box-shadow: 0 -4px 20px -2px rgba(15, 23, 42, 0.08); }
+
+        .parallax-layer {
+            transition: transform 0.1s ease-out;
+            will-change: transform;
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .bottom-nav-shadow {
+            box-shadow: 0 -4px 20px -2px rgba(15, 23, 42, 0.08);
+        }
     </style>
 </head>
 <body class="antialiased text-brand-dark pb-20 md:pb-0">
 
-    <header class="hidden md:block sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <header class="hidden md:block sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 transition-all duration-200">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index-en.html" class="flex items-center gap-1 text-2xl font-extrabold tracking-tight">
+            <a href="index.html" class="flex items-center gap-1 text-2xl font-extrabold tracking-tight">
                 <span class="text-brand-dark">Webb</span><span class="amber-gradient-text text-3xl font-black">S</span><span class="text-brand-dark">kapa</span>
             </a>
 
             <nav class="flex items-center gap-8 font-medium text-slate-600 text-sm">
-                <a href="#services" class="hover:text-brand-amber transition-colors">Why WebbSkapa</a>
-                <a href="#pricing" class="hover:text-brand-amber transition-colors">Packages & Pricing</a>
+                <a href="#services" class="hover:text-brand-amber transition-colors">Varför WebbSkapa</a>
+                <a href="#pricing" class="hover:text-brand-amber transition-colors">Paket & Pris</a>
                 <a href="#portfolio" class="hover:text-brand-amber transition-colors">Portfolio</a>
-                <a href="#location" class="hover:text-brand-amber transition-colors">Contact & Map</a>
+                <a href="#location" class="hover:text-brand-amber transition-colors">Kontakt & Karta</a>
             </nav>
 
             <div class="flex items-center gap-4">
+                <!-- Language Switcher -->
                 <div class="inline-flex items-center bg-slate-100 p-1 rounded-full text-xs font-semibold">
-                    <a href="index.html" class="px-2.5 py-1 rounded-full text-slate-500 hover:text-slate-900">SV</a>
-                    <a href="index-en.html" class="px-2.5 py-1 rounded-full bg-white text-slate-900 shadow-sm">EN</a>
+                    <a href="index.html" class="px-2.5 py-1 rounded-full bg-white text-slate-900 shadow-sm">SV</a>
+                    <a href="index-en.html" class="px-2.5 py-1 rounded-full text-slate-500 hover:text-slate-900">EN</a>
                     <a href="index-fi.html" class="px-2.5 py-1 rounded-full text-slate-500 hover:text-slate-900">FI</a>
                 </div>
 
-                <a href="https://wa.me/358400000000?text=Hi!%20I'm%20interested%20in%20a%20website%20from%20WebbSkapa." 
+                <a href="https://wa.me/358400000000?text=Hej!%20Jag%20är%20intresserad%20av%20en%20hemsida%20från%20WebbSkapa." 
                    target="_blank" 
-                   class="inline-flex items-center gap-2 bg-brand-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-800 transition-all shadow-md">
+                   rel="noopener"
+                   class="inline-flex items-center gap-2 bg-brand-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-800 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
                     <i data-lucide="message-square" class="w-4 h-4 text-brand-amber"></i>
-                    <span>Contact Us</span>
+                    <span>Kontakta Oss</span>
                 </a>
             </div>
         </div>
@@ -76,36 +115,42 @@
         <div class="flex items-center justify-around text-xs font-medium text-slate-600">
             <a href="#hero" class="flex flex-col items-center gap-1 py-1 px-3 text-brand-amber">
                 <i data-lucide="home" class="w-5 h-5"></i>
-                <span>Home</span>
+                <span>Start</span>
             </a>
-            <a href="#pricing" class="flex flex-col items-center gap-1 py-1 px-3 hover:text-brand-amber">
+            <a href="#pricing" class="flex flex-col items-center gap-1 py-1 px-3 hover:text-brand-amber transition-colors">
                 <i data-lucide="calculator" class="w-5 h-5"></i>
-                <span>Price</span>
+                <span>Pris</span>
             </a>
-            <a href="#portfolio" class="flex flex-col items-center gap-1 py-1 px-3 hover:text-brand-amber">
+            <a href="#portfolio" class="flex flex-col items-center gap-1 py-1 px-3 hover:text-brand-amber transition-colors">
                 <i data-lucide="briefcase" class="w-5 h-5"></i>
-                <span>Work</span>
+                <span>Portfolio</span>
             </a>
-            <a href="https://wa.me/358400000000?text=Hi!%20I'd%20like%20to%20order%20a%20website." 
+            <a href="https://wa.me/358400000000?text=Hej!%20Jag%20vill%20beställa%20en%20hemsida." 
                target="_blank" 
                class="flex flex-col items-center gap-1 py-1 px-3 text-emerald-600 font-bold">
                 <i data-lucide="phone-call" class="w-5 h-5"></i>
-                <span>Contact</span>
+                <span>Kontakt</span>
             </a>
         </div>
     </nav>
 
     <main>
         <section id="hero" class="relative overflow-hidden pt-12 md:pt-20 pb-16 md:pb-28 bg-gradient-to-b from-amber-50/40 via-white to-slate-50/50">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="parallax-layer absolute top-10 -left-20 w-72 h-72 bg-amber-200/40 rounded-full blur-3xl pointer-events-none" data-speed="0.15"></div>
+            <div class="parallax-layer absolute bottom-10 -right-20 w-96 h-96 bg-slate-200/50 rounded-full blur-3xl pointer-events-none" data-speed="-0.1"></div>
+
+            <div class="max-w-6xl mx-auto px-6 relative z-10">
                 <div class="md:hidden flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
-                    <a href="index-en.html" class="text-2xl font-extrabold tracking-tight">
+                    <a href="index.html" class="text-2xl font-extrabold tracking-tight">
                         <span class="text-brand-dark">Webb</span><span class="amber-gradient-text text-3xl font-black">S</span><span class="text-brand-dark">kapa</span>
                     </a>
-                    <div class="inline-flex items-center bg-slate-100 p-1 rounded-full text-[11px] font-semibold">
-                        <a href="index.html" class="px-2 py-0.5 rounded-full text-slate-500">SV</a>
-                        <a href="index-en.html" class="px-2 py-0.5 rounded-full bg-white text-slate-900 shadow-sm">EN</a>
-                        <a href="index-fi.html" class="px-2 py-0.5 rounded-full text-slate-500">FI</a>
+                    
+                    <div class="flex items-center gap-2">
+                        <div class="inline-flex items-center bg-slate-100 p-1 rounded-full text-[11px] font-semibold">
+                            <a href="index.html" class="px-2 py-0.5 rounded-full bg-white text-slate-900 shadow-sm">SV</a>
+                            <a href="index-en.html" class="px-2 py-0.5 rounded-full text-slate-500">EN</a>
+                            <a href="index-fi.html" class="px-2 py-0.5 rounded-full text-slate-500">FI</a>
+                        </div>
                     </div>
                 </div>
 
@@ -113,105 +158,190 @@
                     <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
                         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-amber-100/70 border border-amber-200/60 rounded-full text-xs font-semibold text-brand-amber-dark shadow-sm">
                             <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-                            <span>Fast & Modern Websites in Åland Islands</span>
+                            <span>Snabba, Moderna Hemsidor på Åland</span>
                         </div>
 
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
-                            Your New Website.<br class="hidden sm:block"/>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-amber-700 to-amber-600">Fixed Price. Zero Surprises.</span>
+                            Din Nya Hemsida.<br class="hidden sm:block"/>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-amber-700 to-amber-600">Fast Pris. Inga Överraskningar.</span>
                         </h1>
 
                         <p class="text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                            We help local small businesses in Åland and Finland grow online. Get a complete, mobile-optimized website for just <strong class="text-slate-900 font-bold">€500</strong>.
+                            Vi hjälper lokala småföretag på Åland och i Finland att växa online. Få en komplett, mobilanpassad hemsida för endast <strong class="text-slate-900 font-bold">€500</strong>.
                         </p>
 
                         <div class="inline-flex items-center justify-center lg:justify-start gap-3 py-2 px-4 bg-white border border-slate-200 rounded-xl shadow-sm text-sm font-medium text-slate-700">
                             <span class="flex items-center gap-1.5 text-emerald-600 font-bold">
-                                <i data-lucide="check-circle-2" class="w-4 h-4"></i> 50% Upfront (€250)
+                                <i data-lucide="check-circle-2" class="w-4 h-4"></i> 50% Vid start (€250)
                             </span>
                             <span class="text-slate-300">|</span>
                             <span class="flex items-center gap-1.5 text-slate-700">
-                                <i data-lucide="shield-check" class="w-4 h-4 text-brand-amber"></i> 50% Upon Delivery
+                                <i data-lucide="shield-check" class="w-4 h-4 text-brand-amber"></i> 50% Vid leverans
                             </span>
                         </div>
 
                         <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                            <a href="#estimator" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-amber-600 to-amber-500 text-white px-8 py-4 rounded-xl font-bold text-base shadow-lg">
-                                <span>Calculate Your Price</span>
+                            <a href="#estimator" 
+                               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-700 hover:to-amber-600 text-white px-8 py-4 rounded-xl font-bold text-base shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30 transition-all hover:-translate-y-0.5">
+                                <span>Räkna Ut Ditt Pris</span>
                                 <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                            <a href="tel:+358400000000" 
+                               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white border border-slate-200 hover:bg-slate-50 text-slate-800 px-6 py-4 rounded-xl font-semibold text-base shadow-sm transition-all">
+                                <i data-lucide="phone" class="w-4 h-4 text-slate-500"></i>
+                                <span>Ring Direkt</span>
                             </a>
                         </div>
                     </div>
 
                     <div class="lg:col-span-5 relative">
-                        <img src="https://placehold.co/800x600/0f172a/f59e0b?text=WebbSkapa+English+Demo" class="rounded-2xl shadow-2xl border border-slate-200 w-full h-80 object-cover" alt="Demo">
+                        <div class="relative mx-auto max-w-md lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white p-3">
+                            <img src="https://placehold.co/800x600/0f172a/f59e0b?text=WebbSkapa+Demo+Site" 
+                                 alt="Hemsida på laptop och mobil" 
+                                 class="rounded-xl w-full h-80 object-cover"
+                                 loading="lazy" />
+                            
+                            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-card border border-white/80 shadow-lg flex items-center justify-between">
+                                <div>
+                                    <p class="text-xs text-slate-500 font-medium">Lokal Webbyrå</p>
+                                    <p class="text-sm font-bold text-slate-900">Sandåsvägen 4, Mariehamn</p>
+                                </div>
+                                <span class="p-2.5 bg-amber-500 text-white rounded-lg shadow">
+                                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="pricing" class="py-20 bg-slate-900 text-white">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="text-xs font-bold tracking-widest text-amber-400 uppercase">Transparent Pricing</span>
-                    <h2 class="text-3xl font-extrabold sm:text-4xl mt-2">Fixed Packages & Add-ons</h2>
+        <section id="pricing" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+            <div class="max-w-6xl mx-auto px-6 relative z-10">
+                <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+                    <span class="text-xs font-bold tracking-widest text-amber-400 uppercase">Transparens framför allt</span>
+                    <h2 class="text-3xl font-extrabold sm:text-4xl mt-2 text-white">Fast Prispaket & Tillval</h2>
+                    <p class="text-slate-300 mt-3 text-sm sm:text-base">Inga dolda avgifter. Bygg ditt eget paket nedan och se exakt vad det kostar.</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    <div id="estimator" class="lg:col-span-7 bg-slate-800/80 border border-slate-700 rounded-3xl p-6 sm:p-8">
+                    <div id="estimator" class="lg:col-span-7 bg-slate-800/80 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-md animate-on-scroll">
                         <div class="flex items-center justify-between mb-6 pb-6 border-b border-slate-700">
                             <div>
-                                <span class="text-xs font-bold uppercase text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full">Base Package</span>
-                                <h3 class="text-2xl font-bold text-white mt-2">Business Website</h3>
+                                <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">Grundpaket</span>
+                                <h3 class="text-2xl font-bold text-white mt-2">Företagshemsida</h3>
                             </div>
-                            <span class="text-3xl font-extrabold text-white">€500</span>
+                            <div class="text-right">
+                                <span class="text-3xl sm:text-4xl font-extrabold text-white">€500</span>
+                                <p class="text-xs text-slate-400">Engångskostnad</p>
+                            </div>
                         </div>
 
-                        <div class="space-y-4">
-                            <label class="flex items-center justify-between p-3.5 bg-slate-900/60 border border-slate-700 rounded-xl cursor-pointer">
+                        <div class="space-y-4 pt-2">
+                            <label class="flex items-center justify-between p-3.5 bg-slate-900/60 hover:bg-slate-900 border border-slate-700/60 rounded-xl cursor-pointer transition-colors group">
                                 <div class="flex items-center gap-3">
-                                    <input type="checkbox" id="addon-rush" class="w-5 h-5 accent-amber-500" onchange="calculateTotal()">
+                                    <input type="checkbox" id="addon-rush" class="w-5 h-5 accent-amber-500 rounded cursor-pointer" onchange="calculateTotal()">
                                     <div>
-                                        <p class="text-sm font-semibold text-white">Express Delivery (Rush Order)</p>
-                                        <p class="text-xs text-slate-400">Ready in under 5 business days</p>
+                                        <p class="text-sm font-semibold text-white group-hover:text-amber-400 transition-colors">Expressleverans (Snabbspår)</p>
+                                        <p class="text-xs text-slate-400">Klar på under 5 arbetsdagar</p>
                                     </div>
                                 </div>
                                 <span class="text-sm font-bold text-amber-400">+€150</span>
                             </label>
 
-                            <div class="p-3.5 bg-slate-900/60 border border-slate-700 rounded-xl flex items-center justify-between">
-                                <div>
-                                    <p class="text-sm font-semibold text-white">Extra Custom Pages / Features</p>
-                                    <p class="text-xs text-slate-400">Booking system, multilingual, menu</p>
-                                </div>
+                            <label class="flex items-center justify-between p-3.5 bg-slate-900/60 hover:bg-slate-900 border border-slate-700/60 rounded-xl cursor-pointer transition-colors group">
                                 <div class="flex items-center gap-3">
-                                    <button type="button" onclick="updateFeatureCount(-1)" class="w-8 h-8 rounded-lg bg-slate-700 font-bold">-</button>
-                                    <span id="feature-count" class="font-bold text-white">0</span>
-                                    <button type="button" onclick="updateFeatureCount(1)" class="w-8 h-8 rounded-lg bg-slate-700 font-bold">+</button>
+                                    <input type="checkbox" id="addon-maintenance" class="w-5 h-5 accent-amber-500 rounded cursor-pointer" onchange="calculateTotal()">
+                                    <div>
+                                        <p class="text-sm font-semibold text-white group-hover:text-amber-400 transition-colors">Skötsel & Underhåll</p>
+                                        <p class="text-xs text-slate-400">Hosting, säkerhetskopior & uppdateringar</p>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-bold text-amber-400">+€35/mån</span>
+                            </label>
+
+                            <div class="p-3.5 bg-slate-900/60 border border-slate-700/60 rounded-xl space-y-2">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-sm font-semibold text-white">Extra undersidor / funktioner</p>
+                                        <p class="text-xs text-slate-400">Bokning, flerspråk, meny</p>
+                                    </div>
+                                    <span class="text-sm font-bold text-amber-400">+€100 / st</span>
+                                </div>
+                                <div class="flex items-center gap-3 pt-1">
+                                    <button type="button" onclick="updateFeatureCount(-1)" class="w-8 h-8 rounded-lg bg-slate-700 hover:bg-slate-600 flex items-center justify-center font-bold text-lg">-</button>
+                                    <span id="feature-count" class="font-bold text-white min-w-[20px] text-center">0</span>
+                                    <button type="button" onclick="updateFeatureCount(1)" class="w-8 h-8 rounded-lg bg-slate-700 hover:bg-slate-600 flex items-center justify-center font-bold text-lg">+</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="lg:col-span-5 bg-gradient-to-br from-amber-600 to-amber-700 text-white rounded-3xl p-6 sm:p-8">
-                        <p class="text-xs font-extrabold uppercase text-amber-200">Price Breakdown</p>
-                        <div class="py-6">
+                    <div class="lg:col-span-5 bg-gradient-to-br from-amber-600 to-amber-700 text-white rounded-3xl p-6 sm:p-8 shadow-2xl sticky top-28 animate-on-scroll">
+                        <div class="flex items-center justify-between pb-4 border-b border-white/20">
+                            <span class="text-xs font-extrabold uppercase tracking-widest text-amber-200">Kostnadssummering</span>
+                            <i data-lucide="receipt" class="w-5 h-5 text-amber-200"></i>
+                        </div>
+
+                        <div class="py-6 space-y-3">
                             <div class="flex justify-between items-baseline">
-                                <span class="text-base font-bold">Total Upfront:</span>
-                                <span id="total-upfront-price" class="text-3xl font-black">€500</span>
+                                <span class="text-base font-bold">Total engångskostnad:</span>
+                                <span id="total-upfront-price" class="text-3xl font-black text-white">€500</span>
                             </div>
+
                             <div class="bg-black/20 rounded-2xl p-4 mt-4 space-y-2 text-xs">
+                                <p class="font-bold text-amber-200 uppercase tracking-wider">Betalningsplan (50/50):</p>
                                 <div class="flex justify-between">
-                                    <span>Deposit (50%):</span>
+                                    <span>1. Handpenning vid start (50%):</span>
                                     <span id="deposit-price" class="font-bold">€250</span>
                                 </div>
                                 <div class="flex justify-between">
-                                    <span>Upon completion (50%):</span>
+                                    <span>2. Slutbetalning vid leverans:</span>
                                     <span id="final-price" class="font-bold">€250</span>
                                 </div>
                             </div>
                         </div>
-                        <a id="calc-cta-link" href="https://wa.me/358400000000" target="_blank" class="w-full inline-flex items-center justify-center bg-slate-900 text-white py-4 rounded-xl font-bold">Order Website</a>
+
+                        <a id="calc-cta-link" 
+                           href="https://wa.me/358400000000?text=Hej!%20Jag%20vill%20beställa%20hemsida." 
+                           target="_blank"
+                           class="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-black text-white py-4 px-6 rounded-xl font-bold text-sm shadow-xl transition-all hover:scale-[1.02]">
+                            <i data-lucide="send" class="w-4 h-4 text-amber-400"></i>
+                            <span>Beställ Med Denna Konfiguration</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-20 bg-slate-50">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-xs font-bold tracking-wider text-brand-amber uppercase">Portfolio</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl mt-1">Skapade för Lokala Verksamheter</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                        <img src="https://placehold.co/600x400/d97706/ffffff?text=Sk%C3%A4rg%C3%A5rdens+Bageri" class="w-full h-48 object-cover" alt="Bageri">
+                        <div class="p-6">
+                            <h3 class="font-bold text-slate-900">Skärgårdens Bageri</h3>
+                            <p class="text-slate-500 text-xs mt-1">Mariehamn, Åland</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                        <img src="https://placehold.co/600x400/0f172a/ffffff?text=%C3%85lands+Havscharter" class="w-full h-48 object-cover" alt="Charter">
+                        <div class="p-6">
+                            <h3 class="font-bold text-slate-900">Ålands Havscharter</h3>
+                            <p class="text-slate-500 text-xs mt-1">Eckerö, Åland</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                        <img src="https://placehold.co/600x400/b45309/ffffff?text=Sj%C3%B6bloms+Bygg" class="w-full h-48 object-cover" alt="Bygg">
+                        <div class="p-6">
+                            <h3 class="font-bold text-slate-900">Sjöbloms Bygg & Snickeri</h3>
+                            <p class="text-slate-500 text-xs mt-1">Jomala, Åland</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -219,13 +349,16 @@
 
         <section id="location" class="py-20 bg-white">
             <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-5 space-y-4">
-                    <span class="text-xs font-bold text-brand-amber uppercase">Location</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900">Mariehamn Office</h2>
-                    <p class="text-slate-600 text-sm">Sandåsvägen 4, 22100 Mariehamn, Åland Islands, Finland</p>
-                    <a href="mailto:hej@webbskapa.ax" class="block font-bold text-slate-900">hej@webbskapa.ax</a>
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold tracking-wider text-brand-amber uppercase">Besök & Kontakt</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Lokal Närvaro i Mariehamn</h2>
+                    <p class="text-slate-600 text-sm">Sandåsvägen 4, 22100 Mariehamn, Åland, Finland</p>
+                    <div class="space-y-3 pt-2">
+                        <a href="tel:+358400000000" class="block font-bold text-slate-900 hover:text-brand-amber">+358 40 000 0000</a>
+                        <a href="mailto:hej@webbskapa.ax" class="block font-bold text-slate-900 hover:text-brand-amber">hej@webbskapa.ax</a>
+                    </div>
                 </div>
-                <div class="lg:col-span-7 h-80 rounded-2xl overflow-hidden border border-slate-200">
+                <div class="lg:col-span-7 h-80 rounded-2xl overflow-hidden border border-slate-200 shadow-lg">
                     <iframe title="Map" width="100%" height="100%" style="border:0;" loading="lazy" src="https://maps.google.com/maps?q=Sand%C3%A5sv%C3%A4gen%204%2C%20Mariehamn%2C%20%C3%85land&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
                 </div>
             </div>
@@ -235,17 +368,21 @@
     <script>
         lucide.createIcons();
         let customFeatureCount = 0;
+        const BASE_PRICE = 500, RUSH_PRICE = 150, FEATURE_PRICE = 100;
+
         function updateFeatureCount(delta) {
             customFeatureCount = Math.max(0, customFeatureCount + delta);
             document.getElementById('feature-count').textContent = customFeatureCount;
             calculateTotal();
         }
+
         function calculateTotal() {
             const isRush = document.getElementById('addon-rush').checked;
-            let total = 500 + (isRush ? 150 : 0) + (customFeatureCount * 100);
-            document.getElementById('total-upfront-price').textContent = `€${total}`;
-            document.getElementById('deposit-price').textContent = `€${Math.round(total / 2)}`;
-            document.getElementById('final-price').textContent = `€${total - Math.round(total / 2)}`;
+            let totalUpfront = BASE_PRICE + (isRush ? RUSH_PRICE : 0) + (customFeatureCount * FEATURE_PRICE);
+            const deposit = Math.round(totalUpfront / 2);
+            document.getElementById('total-upfront-price').textContent = `€${totalUpfront}`;
+            document.getElementById('deposit-price').textContent = `€${deposit}`;
+            document.getElementById('final-price').textContent = `€${totalUpfront - deposit}`;
         }
     </script>
 </body>
